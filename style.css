@@ -3,17 +3,19 @@ body, html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Verdana', Verdana;
+  color: #fffff
   margin: 50;
   padding: 50;
   max-width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color:  #ADD8E6;
 }
 
 /* Add a background image */
 body {
-  background-image: url("C:\Users\user\Downloads\me.jpeg");
+  background-image: url("https://i.pinimg.com/564x/11/26/99/1126993c29b11e8f80c8e734b4c61e7d.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,28 +26,108 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
-  background-color:  #f2f2f2;
+  padding: 20px;
+  background-color: #f2f2f2;
   backdrop-filter: blur(5px);
   position: sticky;
   top: 0;
   z-index: 1;
-  box-shadow: 0px 2px 4px  #f2f2f2;
+  box-shadow: 0px 2px 4px #f2f2f2;
 }
+
+.header {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: perspective(50px) translate(-50%, -50%);
+transform: skewY(15deg);
+transition: 0.5s;
+}
+
+.header:hover {
+transform: perspective(50px) translate(-50%, -50%);
+transform: skewY(0deg);
+}
+
+.header h1 span {
+position: absolute;
+top: 0;
+left: 0;
+transform: translate(-50%, -50%);
+margin: 0;
+padding: 0;
+text-transform: uppercase;
+font-size: 1.5em;
+color: #00000;
+transform-style: preserve-3d;
+transition: 0.8s;
+}
+
+.header h1 span:nth-child(1) {
+clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+.header h1 span:nth-child(2) {
+color: #5E17EB;
+transform: translate(-50%, -50%) skewX(-60deg);
+left: -57px;
+clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+}
+
+.header h1 span:nth-child(3) {
+transform: translate(-50%, -50%) skewY(0deg);
+left: -114px;
+clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+}
+
+.header:hover h1 span:nth-child(2),
+.header:hover h1 span:nth-child(3) {
+transform: translate(-50%, -50%) skewX(0deg);
+left: 0;
+color: #fff;
+}
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+header nav ol {
+  display: flex;
+  list-style: underline;
+  margin: 0;
+  padding: 0;
+}
+
+header nav li {
+  margin: 0 10px;
+}
+
+header nav li a {
+  color: #0b0d12;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+header nav li a:hover {
+  color: #ffffff;
+}
+
 
 header img {
   height: 150px;
   width: 150px;
   border-radius: 100%;
-  box-shadow: 0px 2px 4px  #f2f2f2;
+  box-shadow: 0px 2px 4px  #ffffff;
 }
 
 header h1 {
   margin: 0;
   font-size: 32px;
-  text-shadow: 2px 2px #b6a1c2;
-  color: #00000;
-  text-transform: uppercase;
+  text-shadow: 2px 2px #ffffff;
+  color: #0b0d12;
+  font-style: italic;
+  text-transform: italic;
+  
 }
 
 /* Style the navigation */
@@ -68,7 +150,7 @@ nav a {
   text-decoration: underline;
   color: #fffff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 12px;
   text-shadow: 1px 1px #00000;
   transition: all 0.3s ease;
 }
@@ -80,65 +162,24 @@ nav a:hover {
 
 /* Style the section */
 section {
-  background-image: url("C:\Users\user\Downloads\WhatsApp Image 2023-04-08 at 4.09.39 PM.jpeg");
+  background-image: url("https://i.pinimg.com/474x/15/8a/5d/158a5d1980d3fd9808fa49083226e98d.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 45px;
-  margin: 5px 0;
-  background-color:  #f2f2f2;
+  padding: 5px;
+  margin: 35px 0;
+  background-color:  #3167bd;
+  font-style: italic;
   backdrop-filter: blur(5px);
   box-shadow: 0px 2px 4px #000000;
   border-radius: 20px;
-  overflow-x: scroll; /* Add horizontal scroll */
-}
-#about {
-	position: relative;
-}
-
-.about-gif {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.about-gif img {
-	width: 100px; /* adjust the size of the gif as needed */
-	height:120px;
-}
-#project {
-	position: relative;
-}
-
-.project-gif {
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
-.project-gif img {
-	width: 150px; /* adjust the size of the gif as needed */
-	height:160px;
-}
-#resume {
-	position: relative;
-}
-
-.resume-gif {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.resume-gif img {
-	width: 150px; /* adjust the size of the gif as needed */
-	height:110px;
-}
+  background-image: https://i.pinimg.com/564x/11/26/99/1126993c29b11e8f80c8e734b4c61e7d.jpg;
+  }
 section h2 {
   margin-top: 0;
   text-align: center;
-  text-shadow: 2px 2px #e6e6ff;
-  color: #00000;
+  text-shadow: 2px 2px #fffff;
+  text-color: #fffff;
   text-transform: uppercase;
 }
 
@@ -154,8 +195,8 @@ section ul {
 section li {
   margin: 20px;
   padding: 10px;
-  background-color: #FFFFFF;
-  box-shadow: 5px 5px 5px #e6e6ff;
+  background-color: #83b2cc;
+  box-shadow: 10px 10px 1px #130e59;
   border-radius: 10px;
   text-align: center;
   min-width: 200px;
